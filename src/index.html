@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Gym</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+    <body class="bg-black text-white font-sans">
+        <header class="bg-black shadow-sm">
+          <nav class="container mx-auto px-6 py-4">
+              <div class="flex justify-between items-center">
+                  <a href="#" class=" text-white font-bold text-2xl flex items-center">
+                      Planet Gym
+                  </a>
+                  <div class="hidden md:flex items-center space-x-8">
+                    <a href="#historia" class="text-white hover:text-gym-red transition duration-300 text-lg">Historia</a>
+                    <a href="#instalaciones" class="text-white hover:text-gym-red transition duration-300 text-lg">Instalaciones</a>
+                    <a href="#instructores" class="text-white hover:text-gym-red transition duration-300 text-lg">Instructores</a>
+                    <a href="#suscripciones" class="text-white hover:text-gym-red transition duration-300 text-lg">Suscripciones</a>
+                  </div>
+              </div>
+          </nav>
+        </header>
+
+        <div class="separator">
+            <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
+        </div>
+
+        <main>
+            <section id="#historia" class="bg-black text-white py-20">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenido a Planet Gym</h1>
+                    <p class="text-xl mb-8">Transforma tu cuerpo, cambia tu vida</p>
+                    <a href="#" class="bg-gym-red text-white font-bold py-3 px-8 rounded-full hover:bg-red-700 transition duration-300">Comienza Ahora</a>
+                </div>
+            </section>
+
+            <div class="separator">
+                <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
+            </div>
+
+            <section id="historia" class="py-16 bg-black text-white">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-3xl mx-auto">
+                        <h2 class="text-3xl font-bold mb-6 text-center">Nuestra Historia</h2>
+                        <p class="mb-4 text-gray-300">En Planet Gym, creemos que cada persona tiene el potencial de alcanzar sus metas y superar sus límites. Nació en 2008 con la visión de crear un espacio donde todos, sin importar su nivel de condición física, pudieran comenzar su viaje hacia un estilo de vida más saludable y activo. Desde nuestros humildes comienzos, hemos evolucionado hasta convertirnos en un refugio para los amantes del fitness y aquellos que buscan mejorar su bienestar integral.</p>
+                        <p class="mb-4 text-gray-300">Desde el primer día, nos hemos comprometido a ofrecer un ambiente inclusivo y motivador. En Planet Gym, cada miembro es importante y se siente como parte de una comunidad vibrante y solidaria. Nuestros entrenadores apasionados y experimentados están aquí para guiarte, motivarte y ayudarte a alcanzar tus objetivos personales, ya sea perder peso, ganar masa muscular o simplemente disfrutar de un estilo de vida más saludable.</p>
+                        <p class="mb-4 text-gray-300">Además, contamos con instalaciones de última generación que incluyen una variedad de equipos de entrenamiento, espacios para clases grupales y áreas de relajación. Nuestro compromiso con la innovación y la mejora continua nos ha permitido crear un entorno que inspira y desafía a nuestros miembros a dar lo mejor de sí mismos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separator">
+                <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
+            </div>
+
+            <section id="instalaciones" class="py-16 bg-black text-white" x-data="{ activeSlide: 0,  timer: null}" x-init="timer = setInterval(()=> {activeSlide = (activeSlide + 1) % 3}, 5000)">
+                <div class="continer mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12">Nuestras Instalaciones</h2>
+                    <div class="relative overflow-hidden max-w-4xl mx-auto">
+                        <div class="flex transition-transform duration-300 ease-in-out" :style="{ transform: `translateX(-${activeSlide * 100}%)` }">
+                            <div class="w-full flex-shrink-0">
+                                <img src="/img/IMG_1462.webp" alt="entrada principal" class="w-full h-64 md:h-96 object-cover rounded-lg">
+                            </div>
+                            <div class="w-full flex-shrink-0">
+                                <img src="/img/IMG_1439.webp" alt="area de zumba" class="w-full h-64 md:h-96 object-cover rounded-lg">
+                            </div>
+                            <div class="w-full flex-shrink-0">
+                                <img src="/img/IMG_1445.webp" alt="area de pesas" class="w-full h-64 md:h-96 object-cover rounded-lg">
+                            </div>
+                        </div>
+                        <button @click="activeSlide = (activeSlide - 1 + 3) % 3" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white p-2 rounded-full hover:bg-opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button @click="activeSlide = (activeSlide + 1) % 3" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white p-2 rounded-full hover:bg-opacity-100 transition-opacity">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex justify-center mt-4">
+                        <button @click="activeSlide = 0" :class="{ 'bg-gym-red': activeSlide === 0 }" class="h-3 w-3 rounded-full mx-1 focus:outline-none"></button>
+                        <button @click="activeSlide = 1" :class="{ 'bg-gym-red': activeSlide === 1 }" class="h-3 w-3 rounded-full mx-1 focus:outline-none"></button>
+                        <button @click="activeSlide = 2" :class="{ 'bg-gym-red': activeSlide === 2 }" class="h-3 w-3 rounded-full mx-1 focus:outline-none"></button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="separator">
+                <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
+            </div>
+            
+            <section id="instructores" class="py-16 bg-black text-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12">Nuestros Instructores</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <img src="/img/cliente-1.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
+                            <h3 class="font-bold text-xl mb-2">Juan Pérez</h3>
+                            <p class="text-gym-red">Entrenamiento de fuerza</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/img/cliente-2.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
+                            <h3 class="font-bold text-xl mb-2">Maria García</h3>
+                            <p class="text-gym-red">Yoga</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="/img/cliente-3.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
+                            <h3 class="font-bold text-xl mb-2">Carlos Rodríguez</h3>
+                            <p class="text-gym-red">Zumba</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+        <script type="module" src="./alpine.js"></script>
+      </body>
+
+</html>
