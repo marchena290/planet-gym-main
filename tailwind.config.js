@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'gym-red': '#770000'
+        'gym-red': '#ff0000'
       }
     },
   },
