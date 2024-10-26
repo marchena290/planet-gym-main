@@ -9,6 +9,7 @@
 
     <body class="bg-black text-white font-sans">
         <header class="bg-black shadow-sm">
+            <!--Navbar-->
           <nav class="container mx-auto px-6 py-4">
               <div class="flex justify-between items-center">
                   <a href="#" class=" text-white font-bold text-2xl flex items-center">
@@ -40,8 +41,9 @@
         <div class="separator">
             <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
         </div>
-
+        
         <main>
+            <!--hero-->
             <section id="#historia" class="bg-black text-white py-20">
                 <div class="container mx-auto px-6 text-center">
                     <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenido a Planet Gym</h1>
@@ -54,6 +56,7 @@
                 <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
             </div>
 
+            <!--Historia-->
             <section id="historia" class="py-16 bg-black text-white">
                 <div class="container mx-auto px-6">
                     <div class="max-w-3xl mx-auto">
@@ -69,19 +72,20 @@
                 <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
             </div>
 
+            <!--Instalaciones-->
             <section id="instalaciones" class="py-16 bg-black text-white" x-data="{ activeSlide: 0,  timer: null}" x-init="timer = setInterval(()=> {activeSlide = (activeSlide + 1) % 3}, 5000)">
                 <div class="continer mx-auto px-6">
                     <h2 class="text-3xl font-bold text-center mb-12">Nuestras Instalaciones</h2>
                     <div class="relative overflow-hidden max-w-4xl mx-auto">
                         <div class="flex transition-transform duration-300 ease-in-out" :style="{ transform: `translateX(-${activeSlide * 100}%)` }">
                             <div class="w-full flex-shrink-0">
-                                <img src="/img/IMG_1462.webp" alt="entrada principal" class="w-full h-64 md:h-96 object-cover rounded-lg">
+                                <img src="/img/IMG_1462.webp" alt="entrada principal" class="w-full h-64 md:h-96 object-cover rounded-lg" loading="lazy">
                             </div>
                             <div class="w-full flex-shrink-0">
-                                <img src="/img/IMG_1439.webp" alt="area de zumba" class="w-full h-64 md:h-96 object-cover rounded-lg">
+                                <img src="/img/IMG_1439.webp" alt="area de zumba" class="w-full h-64 md:h-96 object-cover rounded-lg" loading="lazy">
                             </div>
                             <div class="w-full flex-shrink-0">
-                                <img src="/img/IMG_1445.webp" alt="area de pesas" class="w-full h-64 md:h-96 object-cover rounded-lg">
+                                <img src="/img/IMG_1445.webp" alt="area de pesas" class="w-full h-64 md:h-96 object-cover rounded-lg" loading="lazy">
                             </div>
                         </div>
                         <button @click="activeSlide = (activeSlide - 1 + 3) % 3" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white p-2 rounded-full hover:bg-opacity-100 transition-opacity">
@@ -107,24 +111,81 @@
                 <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
             </div>
             
+            <!--Instructores-->
             <section id="instructores" class="py-16 bg-black text-white">
                 <div class="container mx-auto px-6">
                     <h2 class="text-3xl font-bold text-center mb-12">Nuestros Instructores</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <img src="/img/cliente-1.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
-                            <h3 class="font-bold text-xl mb-2">Juan Pérez</h3>
-                            <p class="text-gym-red">Entrenamiento de fuerza</p>
-                        </div>
-                        <div class="text-center">
-                            <img src="/img/cliente-2.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
-                            <h3 class="font-bold text-xl mb-2">Maria García</h3>
-                            <p class="text-gym-red">Yoga</p>
-                        </div>
-                        <div class="text-center">
+                       <!--Roberth Sanchez-->
+                        <div class="bg-gray-900 rounded-lg text-center p-6">
                             <img src="/img/cliente-3.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
-                            <h3 class="font-bold text-xl mb-2">Carlos Rodríguez</h3>
-                            <p class="text-gym-red">Zumba</p>
+                            <h3 class="font-bold text-3xl mb-2">Roberth Sánchez</h3>
+                            <p class="text-gym-red text-2xl">Instructor fitness</p>
+                            <ul class="space-y-2 p-4">
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Instructor de zumba</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Entrenamiento funcional</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Medición corporal</span>                                    
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Horario 7:00 am a 11:00 am y 3:00 pm a 7:00 pm</span>
+                                </li>
+                            </ul>
+                        </div>
+                         <!--Carlos Vega-->
+                         <div class="bg-gray-900 rounded-lg text-center p-6">
+                            <img src="/img/cliente-1.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
+                            <h3 class="font-bold text-3xl mb-2">Carlos Vega</h3>
+                            <p class="text-gym-red text-2xl">Director y instructor fitness</p>
+                            <ul class="space-y-2 p-4" >
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Apoyo personalizado</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Diseño de rutina</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Medición corporal</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Horario 7:00 am a 3:00 pm y 6:00 pm a 9:00 pm</span>
+                                </li>
+                            <ul>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg text-center p-6">
+                            <img src="/img/cliente-2.webp" style="width: 200px; height: 200px;" alt="instructor 1" class="w-48 h-48 rounded-full mx-auto mb-4">
+                            <h3 class="font-bold text-3xl mb-2">Carlos Rodríguez</h3>
+                            <p class="text-gym-red text-2xl">Zumba</p>
+                            <ul class="space-y-2 p-4">
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Instructor de zumba</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Entrenamiento funcional</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Medición corporal</span>                                    
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="h-5 w-5 mr-2 text-gym-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="font-bold">Horario 7:00 am a 11:00 am y 3:00 pm a 7:00 pm</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -134,6 +195,7 @@
                 <div class="w-full h-1 bg-gradient-to-r from-black via-gym-red to-black"></div>
             </div>
 
+            <!--Suscriciones-->
             <section id="suscripciones" class="py-16 bg-black text-white">
                 <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 class="text-3xl font-bold text-center mb-12">Nuestras Suscripciones</h2>
@@ -141,23 +203,23 @@
                         <!-- Diario -->
                         <div class="bg-gray-900 rounded-lg p-6 flex flex-col h-full">
                             <h3 class="text-2xl font-bold mb-2 text-center">Diario</h3>
-                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">3000₡</p>
+                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">₡3000</p>
                             <ul class="space-y-2 mb-6 flex-grow">
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a todo el gimnasio</span>
+                                    <span class="text-sm text-white">Acceso a todo el gimnasio</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Asistencia con instructor</span>
+                                    <span class="text-sm text-white">Asistencia con instructor</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 horas de acceso</span>
+                                    <span class="text-sm text-white">2 horas de acceso</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a vestuarios y duchas incluido</span>
+                                    <span class="text-sm text-white">Acceso a vestuarios y duchas incluido</span>
                                 </li>
                             </ul>
                             <a href="#" class="block text-center bg-gym-red text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">Suscribirse</a>
@@ -166,23 +228,23 @@
                         <!-- Semanal -->
                         <div class="bg-gray-900 rounded-lg p-6 flex flex-col h-full">
                             <h3 class="text-2xl font-bold mb-2 text-center">Semanal</h3>
-                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">8000₡</p>
+                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">₡8000</p>
                             <ul class="space-y-2 mb-6 flex-grow">
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a todo el gimnasio</span>
+                                    <span class="text-sm text-white">Acceso a todo el gimnasio</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Asistencia con instructor</span>
+                                    <span class="text-sm text-white">Asistencia con instructor</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 horas de acceso por día</span>
+                                    <span class="text-sm text-white">2 horas de acceso por día</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a vestuarios y duchas incluido</span>
+                                    <span class="text-sm text-white">Acceso a vestuarios y duchas incluido</span>
                                 </li>
                             </ul>
                             <a href="#" class="block text-center bg-gym-red text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">Suscribirse</a>
@@ -191,23 +253,23 @@
                         <!-- Quincenal -->
                         <div class="bg-gray-900 rounded-lg p-6 flex flex-col h-full">
                             <h3 class="text-2xl font-bold mb-2 text-center">Quincenal</h3>
-                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">13000₡</p>
+                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">₡13000</p>
                             <ul class="space-y-2 mb-6 flex-grow">
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a todo el gimnasio</span>
+                                    <span class="text-sm text-white">Acceso a todo el gimnasio</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Asistencia con instructor</span>
+                                    <span class="text-sm text-white">Asistencia con instructor</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 horas de acceso por día</span>
+                                    <span class="text-sm text-white">2 horas de acceso por día</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a vestuarios y duchas incluido</span>
+                                    <span class="text-sm text-white">Acceso a vestuarios y duchas incluido</span>
                                 </li>
                             </ul>
                             <a href="#" class="block text-center bg-gym-red text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">Suscribirse</a>
@@ -216,35 +278,35 @@
                         <!-- Mensual -->
                         <div class="bg-gray-900 rounded-lg p-6 flex flex-col h-full">
                             <h3 class="text-2xl font-bold mb-2 text-center">Mensual</h3>
-                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">20000₡</p>
+                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">₡20000</p>
                             <ul class="space-y-2 mb-6 flex-grow">
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a todo el gimnasio</span>
+                                    <span class="text-sm text-white">Acceso a todo el gimnasio</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Asistencia por instructor</span>
+                                    <span class="text-sm text-white">Asistencia por instructor</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 horas de acceso al día</span>
+                                    <span class="text-sm tewhite">2 horas de acceso al día</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Medidas corporales</span>
+                                    <span class="text-sm text-white">Medidas corporales</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Rutina personalizada</span>
+                                    <span class="text-sm text-white">Rutina personalizada</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 clases de zumba por semana</span>
+                                    <span class="text-sm text-white">2 clases de zumba por semana</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a vestuarios y duchas incluido</span>
+                                    <span class="text-sm text-white">Acceso a vestuarios y duchas incluido</span>
                                 </li>
                             </ul>
                             <a href="#" class="block text-center bg-gym-red text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">Suscribirse</a>
@@ -253,76 +315,76 @@
                         <!-- Mensualidad para colegiales -->
                         <div class="bg-gray-900 rounded-lg p-6 flex flex-col h-full">
                             <h3 class="text-2xl font-bold mb-2 text-center">Mensualidad para colegiales</h3>
-                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">18000₡</p>
+                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">₡18000</p>
                             <ul class="space-y-2 mb-6 flex-grow">
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red  flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a todo el gimnasio</span>
+                                    <span class="text-sm text-white">Acceso a todo el gimnasio</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Asistencia por instructor</span>
+                                    <span class="text-sm text-white">Asistencia por instructor</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 horas de acceso al día</span>
+                                    <span class="text-sm text-white">2 horas de acceso al día</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Medidas corporales</span>
+                                    <span class="text-sm text-white">Medidas corporales</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Rutina personalizada</span>
+                                    <span class="text-sm text-white">Rutina personalizada</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 clases de zumba por semana</span>
+                                    <span class="text-sm text-white">2 clases de zumba por semana</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a vestuarios y duchas incluido</span>
+                                    <span class="text-sm text-white">Acceso a vestuarios y duchas incluido</span>
                                 </li>
                             </ul>
-                            <p class="text-sm text-gray-400 mb-4">*Aplica para estudiantes 15 a 18 años sin salario</p>
+                            <p class="text-sm text-white mb-4">*Aplica para estudiantes 15 a 18 años sin salario</p>
                             <a href="#" class="block text-center bg-gym-red text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">Suscribirse</a>
                         </div>
             
                         <!-- Mensualidad para universitarios -->
                         <div class="bg-gray-900 rounded-lg p-6 flex flex-col h-full">
                             <h3 class="text-2xl font-bold mb-2 text-center">Mensualidad para universitarios</h3>
-                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">19000₡</p>
+                            <p class="text-3xl font-bold text-gym-red mb-4 text-center">₡19000</p>
                             <ul class="space-y-2 mb-6 flex-grow">
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a todo el gimnasio</span>
+                                    <span class="text-sm texwhite">Acceso a todo el gimnasio</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Asistencia por instructor</span>
+                                    <span class="text-sm text-white">Asistencia por instructor</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 horas de acceso al día</span>
+                                    <span class="text-sm text-white">2 horas de acceso al día</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Medidas corporales</span>
+                                    <span class="text-sm text-white">Medidas corporales</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Rutina personalizada</span>
+                                    <span class="text-sm text-white">Rutina personalizada</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">2 clases de zumba por semana</span>
+                                    <span class="text-sm text-white">2 clases de zumba por semana</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="h-5 w-5 mr-2 text-gym-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                    <span class="text-sm text-gray-300">Acceso a vestuarios y duchas incluido</span>
+                                    <span class="text-sm text-white">Acceso a vestuarios y duchas incluido</span>
                                 </li>
                             </ul>
-                            <p class="text-sm text-gray-400 mb-4">*Aplica para estudiantes 18 a 25 años sin salario</p>
+                            <p class="text-sm text-white mb-4">*Aplica para estudiantes 18 a 25 años sin salario</p>
                             <a href="#" class="block text-center bg-gym-red text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition duration-300">Suscribirse</a>
                         </div>
                     </div>
