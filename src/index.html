@@ -60,21 +60,20 @@
             <section id="historia" class="py-16 bg-black text-white">
                 <div class="container mx-auto px-6">
                     <div class="max-w-3xl mx-auto" x-data="{mostrarTodo: false }">
-                        <!--Primer parte del texto siempre visible-->
                         <h2 class="text-3xl font-bold mb-6 text-center">Nuestra Historia</h2>
+                        <!--Primer parte del texto siempre visible-->
                         <p class="mb-4 text-gray-300">Desde el comienzo, el fundador Carlos Vega tuvo un sueño claro al abrir Planet Gym el 8 de agosto de 2013: crear un espacio acogedor donde cada persona pudiera descubrir y alcanzar su máximo potencial, tanto físico como mental. Iniciamos en un local modesto, con apenas 10 máquinas, pero con un espíritu decidido a hacer la diferencia en la vida de nuestros primeros miembros.</p>
                         
                         <!--Texto que se muestra/oculta segun el estado de 'mostrarTodo'-->
-                        <div x-show="mostrarTodo" x-collapse>
+                        <div id="parrafos-adicionales" class="hidden: md:block">
                             <p class="mb-4 text-gray-300">Con el paso de los años, el compromiso con la calidad y el bienestar nos impulsó a crecer. Lo que comenzó como un pequeño gimnasio se ha transformado en un centro de fitness completo, con una gama de programas y servicios adaptados a las necesidades de cada individuo. Desde entrenamientos funcionales y clases de zumba hasta asesorías personalizadas y planes de entrenamiento diseñados para mejorar cada aspecto del rendimiento físico.</p>
                             <p class="mb-4 text-gray-300">Nuestra misión sigue siendo la misma: ser un lugar de inspiración, comunidad y apoyo, donde cada miembro se sienta parte de algo más grande. Únete a nosotros y sé parte de esta historia de superación y esfuerzo constante, donde todos trabajamos juntos para alcanzar una vida más saludable y plena.</p>
                         </div>
 
                         <!--Boton de Ver más / Ver menos-->
                         <div class="text-center">
-                            <button @click="mostrarTodo = !mostrarTodo"
-                                class="mt-4 text-gym-red font-semibold focus:outline-none md:hidden">
-                                <span x-text="mostrarTodo ? 'Ver menos' : 'Ver más'"></span>
+                            <button id="toggleButton" class="mt-4 text-gym-red font-semibold focus:outline-none md:hidden">
+                                Ver más
                             </button>
                         </div>
                     </div>
