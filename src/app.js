@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function(){
         mobileMenu.classList.toggle('hidden')
     });
 
+    const mobileMenuLink = mobileMenu.querySelectorAll('a');
+    mobileMenuLink.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden')
+        });
+    });
 
     // Funcion para manejar la visibilidad de los parrafos
     function toggleVisibility() {
